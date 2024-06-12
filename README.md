@@ -15,9 +15,14 @@ In SnailGame, the player must avoid colliding with snails while running continuo
 - Game over screen with an option to restart the game.
 
 ## game at run
-<img src="https://github.com/khalwsh/snail-game/blob/main/Screenshot%202024-06-11%20122214.png" width=900>
-<img src="https://github.com/khalwsh/snail-game/blob/main/running%20game.png" width=900>
-<img src="https://github.com/khalwsh/snail-game/blob/main/game%20over.png" width=900>
+### welcome page
+<img src="https://github.com/khalwsh/snail-game/blob/main/assets/first%20page.png" width=900>
+
+### game while playing
+<img src="https://github.com/khalwsh/snail-game/blob/main/assets/snail%20game%20pic.png" width=900>
+
+### game over
+<img src="https://github.com/khalwsh/snail-game/blob/main/assets/game%20over.png" width=900>
 
 
 
