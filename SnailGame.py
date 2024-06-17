@@ -162,7 +162,7 @@ def player_animation():
 # Pygame initialization
 pygame.init()
 screen = pygame.display.set_mode((800, 400))
-pygame.display.set_caption('Runner')
+pygame.display.set_caption('Snail Game')
 clock = pygame.time.Clock()
 test_font = pygame.font.Font('assets/font/Pixeltype.ttf', 50)
 game_active = False
@@ -177,9 +177,19 @@ player.add(Player())
 
 obstacle_group = pygame.sprite.Group()
 
-# Load background images
-sky_surface = pygame.image.load('assets/graphics/Sky.png').convert()
-ground_surface = pygame.image.load('assets/graphics/ground.png').convert()
+# sky image
+noon_surface = pygame.image.load('assets/graphics/Sky.png').convert()
+night_surface = pygame.image.load('assets/graphics/Night_Sky.png').convert()
+Sky = [noon_surface , night_surface]
+Sky_index = 0
+sky_surface = Sky[Sky_index]
+
+# ground image
+noon_ground = pygame.image.load('assets/graphics/ground.png').convert()
+night_ground = pygame.image.load('assets/graphics/night_ground.png').convert()
+ground_index = 0
+Ground = [noon_ground , night_ground]
+ground_surface = Ground[ground_index]
 
 # Snail frames for animation
 snail_frame_1 = pygame.image.load('assets/graphics/snail/snail1.png').convert_alpha()
@@ -213,10 +223,10 @@ player_stand = pygame.image.load('assets/graphics/player/player_stand.png').conv
 player_stand = pygame.transform.rotozoom(player_stand, 0, 2)
 player_stand_rect = player_stand.get_rect(center=(400, 200))
 
-game_name = test_font.render('assets/Pixel Runner', False, (111, 196, 169))
+game_name = test_font.render('Pixel Runner', False, (111, 196, 169))
 game_name_rect = game_name.get_rect(center=(400, 80))
 
-game_message = test_font.render('assets/Press space to run', False, (111, 196, 169))
+game_message = test_font.render('Press space to run', False, (111, 196, 169))
 game_message_rect = game_message.get_rect(center=(400, 330))
 
 # Timers for obstacle and animation events
@@ -228,6 +238,9 @@ pygame.time.set_timer(snail_animation_timer, 500)
 
 fly_animation_timer = pygame.USEREVENT + 3
 pygame.time.set_timer(fly_animation_timer, 200)
+
+sky_animation_timer = pygame.USEREVENT + 4
+pygame.time.set_timer(sky_animation_timer , 10000)
 
 while True:
     for event in pygame.event.get():
@@ -265,6 +278,11 @@ while True:
                 else:
                     fly_frame_index = 0
                 fly_surf = fly_frames[fly_frame_index]
+            if event.type == sky_animation_timer:
+                Sky_index = 1 - Sky_index
+                ground_index = 1 - ground_index
+                ground_surface = Ground[ground_index]
+                sky_surface = Sky[Sky_index]
 
     if game_active:
         screen.blit(sky_surface, (0, 0))
@@ -294,6 +312,10 @@ while True:
             screen.blit(game_message, game_message_rect)
         else:
             screen.blit(score_message, score_message_rect)
+        ground_index = 0
+        Sky_index = 0
+        sky_surface = Sky[Sky_index]
+        ground_surface = Ground[ground_index]
 
     pygame.display.update()
     clock.tick(60)
