@@ -81,9 +81,13 @@ To install the game, you need to have Python and Pygame installed on your machin
 4. Follow the on-screen instructions to play the game.
 
 ## game demo
+### Video Link
+
+[Watch the demo video](https://github.com/khalwsh/snail-game/blob/main/demo/Record_2024_06_17_08_27_54_377.mp4)
+
+### Embedded Video
+
 <video width="600" controls>
-  <source src="[http://example.com/video.mp4](https://github.com/khalwsh/snail-game/blob/main/demo/Record_2024_06_17_08_27_54_377.mp4)" type="video/mp4">
+  <source src="https://github.com/khalwsh/snail-game/raw/main/demo/Record_2024_06_17_08_27_54_377.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
-
-
