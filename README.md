@@ -18,8 +18,11 @@ In SnailGame, the player must avoid colliding with snails while running continuo
 ### welcome page
 <img src="https://github.com/khalwsh/snail-game/blob/main/assets/first%20page.png" width=900>
 
-### game while playing
+### game at morning
 <img src="https://github.com/khalwsh/snail-game/blob/main/assets/snail%20game%20pic.png" width=900>
+
+### game at evening
+<img src="https://github.com/khalwsh/snail-game/blob/main/assets/evening.png" width=900>
 
 ### game over
 <img src="https://github.com/khalwsh/snail-game/blob/main/assets/game%20over.png" width=900>
