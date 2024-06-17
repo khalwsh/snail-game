@@ -82,4 +82,7 @@ To install the game, you need to have Python and Pygame installed on your machin
 
 ## game demo
 
-[![Video on youtube](https://github.com/khalwsh/snail-game/blob/main/demo/Record_2024_06_17_08_27_54_377.mp4)
+
+
+https://github.com/khalwsh/snail-game/assets/136606858/1eae5dfa-71bf-4ae2-8b94-5d7a2a89ea93
+
